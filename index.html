@@ -38,10 +38,10 @@
                 <hr>
                 <h3>Nombre de carrés</h3>
                 <hr>
-                <div class="col-12">
+                <div class="col-12" v-if="numberSquares">
                     <div class="prevsquare"></div>
                 </div>
-                <h3> Ajouter des couleurs !</h3>
+                <h3 v-else> Ajouter des couleurs !</h3>
             </div>
         </div>
         <div class="col-6">
@@ -78,6 +78,9 @@
             }
         },
         computed: {
+            numberSquares() {
+                return this.squares.length;
+            }
         },
         watch: {
         }
