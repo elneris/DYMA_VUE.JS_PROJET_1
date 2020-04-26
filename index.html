@@ -32,8 +32,8 @@
                 </div>
                 <hr>
                 <div class="col-12">
-                    <button class="btn btn-primary">Sauvegarder</button>
-                    <button class="btn btn-secondary">Annuler</button>
+                    <button class="btn btn-primary" @click="saveSquare()">Sauvegarder</button>
+                    <button class="btn btn-secondary" @click="reset()">Annuler</button>
                 </div>
                 <hr>
                 <h3>Nombre de carrés</h3>
@@ -57,8 +57,25 @@
             green: 0,
             blue: 0,
             red: 0,
+            squares: [],
         },
         methods: {
+            saveSquare() {
+                this.squares.push(`rgb(${this.red}, ${this.green}, ${this.blue})`);
+                this.resetColor();
+                console.log(this.squares)
+            },
+            reset() {
+                this.squares = [];
+                this.resetColor();
+                console.log(this.squares)
+
+            },
+            resetColor() {
+                this.red = 0;
+                this.green = 0;
+                this.blue =0;
+            }
         },
         computed: {
         },
