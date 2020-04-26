@@ -39,13 +39,13 @@
                 <h3>Nombre de carrés : {{ numberSquares }}</h3>
                 <hr>
                 <div class="col-12" v-if="numberSquares">
-                    <div class="prevsquare" v-for="square in squares" :style="{ backgroundColor: square }"></div>
+                    <div class="prevsquare" v-for="square in squares" :style="{ backgroundColor: square }" @click="selectedSquare = square"></div>
                 </div>
                 <h3 v-else> Ajouter des couleurs !</h3>
             </div>
         </div>
         <div class="col-6">
-            <div class="square mx-auto"></div>
+            <div class="square mx-auto" :style="{ backgroundColor: selectedSquare }"></div>
         </div>
     </div>
 </div>
@@ -58,18 +58,16 @@
             blue: 0,
             red: 0,
             squares: [],
+            selectedSquare: '',
         },
         methods: {
             saveSquare() {
                 this.squares.push(`rgb(${this.red}, ${this.green}, ${this.blue})`);
                 this.resetColor();
-                console.log(this.squares)
             },
             reset() {
                 this.squares = [];
                 this.resetColor();
-                console.log(this.squares)
-
             },
             resetColor() {
                 this.red = 0;
