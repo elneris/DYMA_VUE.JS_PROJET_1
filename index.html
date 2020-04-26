@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My first Vue.js App</title>
+    <script type="text/javascript" src="./node_modules/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="./main.css" type="text/css">
+</head>
+<body>
+<div id="app" class="container">
+    <div class="row">
+        <div class="col-6">
+            <div class="col-12">
+                <hr>
+                <div class="form-group">
+                    <label>Vert : </label>
+                    <input type="number" class="form-control">
+                </div>
+                <hr>
+                <div class="form-group">
+                    <label>Bleu : </label>
+                    <input type="number" class="form-control">
+                </div>
+                <hr>
+                <div class="form-group">
+                    <label>Rouge : </label>
+                    <input type="number" class="form-control">
+                </div>
+                <hr>
+                <div class="col-12">
+                    <button class="btn btn-primary">Sauvegarder</button>
+                    <button class="btn btn-secondary">Annuler</button>
+                </div>
+                <hr>
+                <h3>Nombre de carrés</h3>
+                <hr>
+                <div class="col-12">
+                    <div class="prevsquare"></div>
+                </div>
+                <h3> Ajouter des couleurs !</h3>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="square mx-auto"></div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    new Vue({
+        el: '#app',
+        data: {
+        },
+        methods: {
+        },
+        computed: {
+        },
+        watch: {
+        }
+    })
+</script>
+</body>
+</html>
